@@ -1,0 +1,48 @@
+plugins {
+    id 'com.android.library'
+}
+
+
+
+version = '1.0.0'
+
+android {
+    namespace 'com.uni2k.sccode'
+    compileSdk 32
+
+    defaultConfig {
+        minSdk 23
+        targetSdk 32
+
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    // 重命名 AAR 文件 并放置在根目录
+    tasks.register("prepareAAR", Copy) {
+        from("$buildDir/outputs/aar/")
+        include("*.aar")
+        rename { "sccode-${version}.aar" }
+        into(".")
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets { main { jniLibs.srcDirs = ['libs'] } }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+
+
+
