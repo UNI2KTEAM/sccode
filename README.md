@@ -8,14 +8,23 @@
 在你的 build.gradle 文件中添加以下依赖项：
 
 **在线模式：**
+在根build.gradle添加repositories:
 ```Gradle
- repositories {
-        maven { url "https://uni2k.luoui.com:2443/api/packages/lynn_shao/maven" }
-        }
+dependencyResolutionManagement {
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories {
+			mavenCentral()
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+在app build.gradle添加依赖
+```Gradle
 dependencies {
-    implementation 'com.uni2k:sccode:version'
+implementation 'com.github.UNI2KTEAM:sccode:Tag(版本号)'
 }
 ```
+
 **离线模式 下载安装 AAR 文件：**
 
 ```Gradle
