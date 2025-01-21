@@ -7,6 +7,7 @@ import android.widget.Button;
 
 
 import com.uni2k.demo.databinding.ActivityMainBinding;
+import com.uni2k.sccode.UniCodeJNI;
 
 import androidx.appcompat.app.AppCompatActivity;
 

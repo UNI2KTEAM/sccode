@@ -19,6 +19,8 @@ import com.google.gson.Gson;
 import com.uni2k.demo.config.ResolutionCameraConfig;
 import com.uni2k.demo.databinding.ActivityCameraBinding;
 import com.uni2k.demo.utils.ImageUtils;
+import com.uni2k.sccode.UniCodeHintType;
+import com.uni2k.sccode.UniCodeJNI;
 
 
 import java.nio.ByteBuffer;
