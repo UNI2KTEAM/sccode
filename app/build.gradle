@@ -48,5 +48,5 @@ dependencies {
     implementation "androidx.camera:camera-view:${camerax_version}"
 
     //引用
-   // implementation 'com.uni2k:sccode:1.0.0'
+   // implementation 'com.github.UNI2KTEAM:sccode:1.0.0'
 }
